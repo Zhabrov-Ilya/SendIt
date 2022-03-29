@@ -1,7 +1,7 @@
 "use strict";
-import Swiper from "https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js";
+import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
 
-const swiper = new Swiper(".swiper-container", {
+const swiper = new Swiper(".swiper", {
   sliderPerView: 1,
   autoHeight: true,
   loop: true,
@@ -14,7 +14,7 @@ const swiper = new Swiper(".swiper-container", {
   },
 
   navigation: {
-    nextEl: '#swiper-next',
-    prevEl: '#swiper-prev',
+    nextEl: '#swiper-button-next',
+    prevEl: '#swiper-button-prev',
   },
 });

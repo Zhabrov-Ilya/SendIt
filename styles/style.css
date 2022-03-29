@@ -20,6 +20,10 @@ h3 {
   color: #000000;
 }
 
+h4 {
+  margin: 0;
+}
+
 h6 {
   margin: 0;
   font-size: 10px;
@@ -435,50 +439,48 @@ p {
 }
 
 .reviews {
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.reviews .slider-box {
-  margin-top: 19px;
+.reviews__container {
+  padding-top: 20px;
   display: flex;
 }
 
-.reviews .slider-box #swiper-next {
-  transform: rotate(180deg);
-}
-
-.reviews .swiper-slide__header {
+.reviews__container .swiper-slide__header {
   display: flex;
 }
 
-.reviews .swiper-slide__header_left > img {
-  max-width: 100px;
+.reviews__container .swiper-slide__header-left {
   display: block;
-  margin-right: 19px;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
 }
 
-.reviews .swiper-slide__header_right {
-  height: inherit;
+.reviews__container .swiper-slide__header-right {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-.reviews .swiper-slide__footer {
+.reviews__container .swiper-slide__footer {
   margin-top: 13px;
 }
 
-.reviews .swiper-arrow {
-  width: auto;
+.reviews__container .slider-button {
   object-fit: contain;
-  margin-top: 43px;
   cursor: pointer;
+  width: auto;
+}
+
+.reviews #swiper-button-next {
+  transform: rotate(180deg);
 }
 
 .advantages {
   padding-top: 21px;
-  padding-bottom: 21px;
   background-color: #f7f7f7;
 }
 
@@ -486,6 +488,7 @@ p {
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr 1fr;
   margin-top: 20px;
+  grid-row-gap: 20px;
 }
 
 .advantages__container img {
@@ -781,19 +784,6 @@ p {
   .callback__left {
     width: 50%;
   }
-  .reviews {
-    padding-top: 48px;
-    padding-bottom: 40px;
-  }
-  .reviews .slider-box #swiper-prev {
-    margin-right: 40px;
-  }
-  .reviews .slider-box #swiper-next {
-    margin-left: 40px;
-  }
-  .reviews .swiper-slide__footer {
-    font-size: 14px;
-  }
   .advantages {
     padding-top: 37px;
     padding-bottom: 50px;
@@ -1001,26 +991,6 @@ p {
   }
   .callback .button {
     min-width: 360px;
-  }
-  .reviews {
-    padding-top: 69px;
-    padding-bottom: 69px;
-  }
-  .reviews .slider-box {
-    margin-top: 60px;
-  }
-  .reviews h3 {
-    font-size: 20px;
-  }
-  .reviews h6 {
-    font-size: 16px;
-  }
-  .reviews .swiper-slide__header_left img {
-    max-width: 160px;
-    width: 160px;
-  }
-  .reviews .swiper-slide__footer {
-    font-size: 16px;
   }
   .advantages {
     padding-top: 100px;
