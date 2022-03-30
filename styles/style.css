@@ -1,5 +1,6 @@
 body {
   font-family: "Roboto", sans-serif;
+  position: relative;
 }
 
 h1 {
@@ -36,12 +37,71 @@ p {
   color: #000000;
 }
 
+.modal {
+  position: fixed;
+  padding: 47px 40px;
+  left: calc(50% - 190px);
+  top: 30%;
+  background-color: #fff;
+  box-shadow: 0px 5px 19px 16px rgba(27, 170, 235, 0.45);
+  z-index: 10;
+  border-radius: 32px;
+}
+
+.modal__cross {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.modal > h3 {
+  margin-bottom: 30px;
+}
+
+.modal .input, .modal .button {
+  margin-top: 13px;
+}
+
+.modal .input {
+  padding: 0 50px 0 0;
+  margin-bottom: 0;
+}
+
+.modal .callback__input {
+  color: #008dcd;
+  background-color: #fff;
+  border: 1px solid #008dcd;
+}
+
+.modal .callback__input::placeholder {
+  color: #008dcd;
+}
+
+.hidden {
+  display: none;
+}
+
+.blur {
+  filter: blur(5px) brightness(50%);
+  transition: all 0.5s;
+}
+
+.no-blur {
+  filter: blur(0px) brightness(100%);
+  transition: all 0.5s;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
 .center {
   padding: 0 20px;
 }
 
 .header {
-  background-image: url(../img/header.png);
+  background-image: url(../img/header.jpg);
   background-repeat: no-repeat;
   background-position: 85%;
   background-size: cover;
@@ -63,6 +123,10 @@ p {
   display: none;
   font-size: 14px;
   color: #FFFFFF;
+}
+
+.header__top > .menu__item:hover {
+  font-weight: bold;
 }
 
 .header__bottom {
@@ -327,12 +391,20 @@ p {
   text-transform: uppercase;
 }
 
+.button:hover {
+  box-shadow: 0px 4px 15px rgba(27, 170, 235, 0.45);
+}
+
 .button_yellow {
   background: #ffcc00;
 }
 
 .button_yellow > h3 {
   color: #363636;
+}
+
+.button_yellow:hover {
+  box-shadow: 0px 4px 20px rgba(255, 204, 0, 0.55);
 }
 
 .steps {
@@ -446,6 +518,7 @@ p {
 .reviews__container {
   padding-top: 20px;
   display: flex;
+  cursor: grab;
 }
 
 .reviews__container .swiper-slide__header {
@@ -578,6 +651,15 @@ p {
   border-radius: 32px;
   padding: 16px 24px;
   cursor: pointer;
+}
+
+.FAQ .accordion-box:hover {
+  box-shadow: 0px 4px 20px rgba(124, 195, 225, 0.6);
+}
+
+.FAQ .accordion-left, .FAQ .accordion-right {
+  display: grid;
+  grid-row-gap: 11px;
 }
 
 .FAQ .panel {
@@ -783,6 +865,10 @@ p {
   }
   .callback__left {
     width: 50%;
+  }
+  .reviews {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .advantages {
     padding-top: 37px;
@@ -992,6 +1078,16 @@ p {
   .callback .button {
     min-width: 360px;
   }
+  .reviews {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  .reviews #swiper-button-prev {
+    margin-right: 30px;
+  }
+  .reviews #swiper-button-next {
+    margin-left: 30px;
+  }
   .advantages {
     padding-top: 100px;
     padding-bottom: 80px;
@@ -1024,6 +1120,7 @@ p {
     align-items: start;
   }
   .guarantees .slide__heading h3 {
+    margin-top: 18px;
     text-align: left;
     font-size: 30px;
   }
@@ -1039,6 +1136,14 @@ p {
   .FAQ {
     padding-top: 64px;
     padding-bottom: 64px;
+  }
+  .FAQ .accordion-container {
+    grid-template: repeat(3, min-content)/1fr 1fr;
+    grid-column-gap: 29px;
+  }
+  .FAQ .accordion-left, .FAQ .accordion-right {
+    display: grid;
+    grid-template: repeat(3, auto)/1fr;
   }
   .question {
     padding-top: 31px;
@@ -1065,7 +1170,6 @@ p {
   }
   .footer-top {
     padding-top: 19px;
-    padding-bottom: 26px;
   }
   .footer-top .menu__item {
     font-size: 18px;
