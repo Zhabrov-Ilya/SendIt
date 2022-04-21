@@ -33,7 +33,6 @@ function toWindowWidth() {
 
   sliderScrollHeight();
 
-  console.log(tabletWidth);
 };
 
 

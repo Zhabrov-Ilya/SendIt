@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
     return;
   }
   setTimeout(function() {
-    modal.classList.remove('hidden');
+    modal.classList.remove('hidden', 'animate__bounceOut');
     modal.classList.add('animate__animated', 'animate__bounceIn');
     blurContainer.classList.remove('no-blur');
     blurContainer.classList.add('blur', 'disabled');
